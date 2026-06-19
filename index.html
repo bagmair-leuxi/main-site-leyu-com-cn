@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信息索引 · 乐鱼体育</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: #f7f8fb;
+            color: #1e293b;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* 深色头图 / hero */
+        .hero {
+            background: linear-gradient(145deg, #0f172a 0%, #1e293b 100%);
+            padding: 72px 0 64px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: -20%;
+            right: -10%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.04) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            background: linear-gradient(to right, #e2e8f0, #94a3b8);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 12px;
+        }
+
+        .hero .sub {
+            color: #94a3b8;
+            font-size: 1.15rem;
+            max-width: 680px;
+            margin: 0 auto;
+            font-weight: 400;
+            border-top: 1px solid rgba(148, 163, 184, 0.15);
+            padding-top: 16px;
+            display: inline-block;
+        }
+
+        /* 正文浅色区 */
+        .content-section {
+            padding: 64px 0 80px;
+        }
+
+        .section-title {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 24px;
+            letter-spacing: -0.01em;
+            border-left: 4px solid #2563eb;
+            padding-left: 16px;
+        }
+
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 28px;
+            margin: 40px 0 48px;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 28px 24px 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.03);
+            transition: transform 0.15s ease, box-shadow 0.2s ease;
+            border: 1px solid #edf2f7;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06), 0 2px 6px rgba(0, 0, 0, 0.02);
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+
+        .card h3 span {
+            background: #2563eb;
+            width: 6px;
+            height: 22px;
+            border-radius: 6px;
+            margin-right: 12px;
+            display: inline-block;
+        }
+
+        .card p {
+            color: #475569;
+            font-size: 0.95rem;
+            line-height: 1.65;
+        }
+
+        .card .tag-list {
+            margin-top: 14px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .card .tag-list span {
+            background: #f1f5f9;
+            color: #1e293b;
+            font-size: 0.8rem;
+            padding: 4px 14px;
+            border-radius: 30px;
+            font-weight: 500;
+        }
+
+        .audience-flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px 40px;
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 32px 36px;
+            border: 1px solid #e9eef4;
+            margin: 36px 0 40px;
+        }
+
+        .audience-item {
+            flex: 1 1 180px;
+        }
+
+        .audience-item .emoji-badge {
+            font-size: 1.8rem;
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+
+        .audience-item h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: #0f172a;
+        }
+
+        .audience-item p {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        .link-paragraph {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 32px 36px;
+            border: 1px solid #e9eef4;
+            margin: 40px 0 32px;
+            font-size: 1.05rem;
+            color: #1e293b;
+        }
+
+        .link-paragraph a {
+            color: #2563eb;
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 1.5px solid transparent;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .link-paragraph a:hover {
+            color: #1e40af;
+            border-bottom-color: #1e40af;
+        }
+
+        .faq-summary {
+            margin-top: 48px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px 36px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 14px;
+        }
+
+        .faq-item strong {
+            display: block;
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 4px;
+            font-size: 0.98rem;
+        }
+
+        .faq-item p {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        .footnote {
+            margin-top: 60px;
+            padding: 20px 0;
+            border-top: 1px solid #e2e8f0;
+            text-align: center;
+            color: #94a3b8;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 640px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero .sub {
+                font-size: 1rem;
+                padding-top: 12px;
+            }
+            .section-title {
+                font-size: 1.3rem;
+            }
+            .grid-cards {
+                grid-template-columns: 1fr;
+            }
+            .audience-flex {
+                padding: 24px 20px;
+                flex-direction: column;
+            }
+            .link-paragraph {
+                padding: 24px 20px;
+                font-size: 0.98rem;
+            }
+            .faq-summary {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- 深色头图 -->
+<header class="hero">
+    <div class="container">
+        <h1>信息卡片 · 乐鱼体育</h1>
+        <div class="sub">资料索引 &amp; 平台功能结构速览</div>
+    </div>
+</header>
+
+<!-- 正文区 -->
+<main class="content-section">
+    <div class="container">
+
+        <!-- 卡片区域：用途方向 -->
+        <h2 class="section-title">平台用途卡片</h2>
+        <div class="grid-cards">
+            <div class="card">
+                <h3><span></span>赛事数据</h3>
+                <p>覆盖足球、篮球、网球等主流联赛的实时比分、统计图表与历史对阵记录，适合赛前分析与赛后复盘。</p>
+                <div class="tag-list">
+                    <span>实时数据</span>
+                    <span>历史统计</span>
+                    <span>联赛覆盖</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3><span></span>内容聚合</h3>
+                <p>整合赛事资讯、视频集锦、专家短评与用户讨论，提供结构化的信息流，便于快速获取关键情报。</p>
+                <div class="tag-list">
+                    <span>资讯流</span>
+                    <span>集锦</span>
+                    <span>社区观点</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3><span></span>索引工具</h3>
+                <p>通过分类标签、联赛筛选、日期检索等方式定位所需内容，减少信息噪音，提升资料整理效率。</p>
+                <div class="tag-list">
+                    <span>筛选检索</span>
+                    <span>标签分类</span>
+                    <span>收藏夹</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 适合人群区块 -->
+        <h2 class="section-title">适合人群</h2>
+        <div class="audience-flex">
+            <div class="audience-item">
+                <div class="emoji-badge">📊</div>
+                <h4>数据分析爱好者</h4>
+                <p>需要结构化赛程与统计数据，支持个人整理与横向对比。</p>
+            </div>
+            <div class="audience-item">
+                <div class="emoji-badge">📰</div>
+                <h4>信息追踪者</h4>
+                <p>希望一站式浏览赛事动态、视频与评论，减少多平台切换成本。</p>
+            </div>
+            <div class="audience-item">
+                <div class="emoji-badge">🧩</div>
+                <h4>资料整理型用户</h4>
+                <p>偏好清晰分类与检索功能，用于日常信息归档与回顾。</p>
+            </div>
+        </div>
+
+        <!-- 自然链接段落：嵌入乐鱼体育 -->
+        <div class="link-paragraph">
+            <p>对于持续跟进体育资讯与数据的用户，<a href="https://main-site-leyu.com.cn">乐鱼体育</a> 提供了一个较为完整的信息索引框架，涵盖赛事数据、内容聚合与检索分类。将其作为日常资料查阅的补充入口，可以较为高效地获取结构化的体育信息。以下摘录部分常见疑问，供初步了解参考。</p>
+        </div>
+
+        <!-- FAQ摘要 -->
+        <h2 class="section-title">常见疑问摘要</h2>
+        <div class="faq-summary">
+            <div class="faq-item">
+                <strong>平台主要提供哪些类型的体育内容？</strong>
+                <p>以赛事数据（比分、统计、历史记录）、资讯文章、视频集锦、用户讨论为主，内容按联赛和运动项目分类。</p>
+            </div>
+            <div class="faq-item">
+                <strong>数据更新频率如何？</strong>
+                <p>主流联赛的实时比分与统计通常在比赛进行中同步更新，历史数据按赛季归档。</p>
+            </div>
+            <div class="faq-item">
+                <strong>是否需要注册才能浏览？</strong>
+                <p>部分基础数据与资讯可直接浏览，个性化功能如收藏、历史记录可能需要注册账号。</p>
+            </div>
+            <div class="faq-item">
+                <strong>移动端适配情况如何？</strong>
+                <p>页面采用响应式设计，在手机与平板设备上可正常查看赛程、数据与文章。</p>
+            </div>
+        </div>
+
+        <div class="footnote">
+            <p>信息索引页 · 基于公开资料整理 · 内容仅供参考</p>
+        </div>
+
+    </div>
+</main>
+
+</body>
+</html>

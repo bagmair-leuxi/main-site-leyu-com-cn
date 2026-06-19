@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://bagmair-leuxi.github.io/main-site-leyu-com-cn/sitemap.xml
