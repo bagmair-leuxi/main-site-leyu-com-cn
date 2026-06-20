@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>平博 · 始于一页介绍</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #fafaf9;
+      color: #1c1c1a;
+      font-family: system-ui, -apple-system, "PingFang SC", "Noto Sans SC", sans-serif;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 3.2rem 1.5rem 4rem;
+    }
+
+    .short-open {
+      font-size: 1.5rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      margin-top: 2rem;
+      margin-bottom: 1.2rem;
+      color: #2d2d2a;
+      border-left: 3px solid #b9a68b;
+      padding-left: 1.1rem;
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+      color: #2b2b28;
+    }
+
+    .subhead {
+      margin-bottom: 0.3rem;
+      color: #68665c;
+      font-weight: 400;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      font-weight: 500;
+      margin-top: 2.6rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #e2dfd6;
+      padding-bottom: 0.4rem;
+    }
+
+    ul {
+      list-style: none;
+      margin: 1.2rem 0 2rem;
+    }
+
+    li {
+      position: relative;
+      padding-left: 1.6rem;
+      margin-bottom: 1rem;
+      font-size: 0.98rem;
+      color: #2f2e2a;
+    }
+
+    li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: #a3977c;
+      font-weight: 300;
+    }
+
+    .card-quiet {
+      background: #f3f1ec;
+      border-radius: 0;
+      padding: 1.5rem 1.8rem;
+      margin: 2.2rem 0;
+      border-left: 2px solid #c6b9a4;
+    }
+
+    .card-quiet p {
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    .card-quiet .label {
+      font-weight: 500;
+      color: #4c4a42;
+    }
+
+    a {
+      color: #1d3a4a;
+      text-decoration: none;
+      border-bottom: 1px solid #c1b7a6;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    a:hover {
+      color: #000;
+      border-bottom-color: #000;
+    }
+
+    .closing-line {
+      margin-top: 3.2rem;
+      padding-top: 1.6rem;
+      border-top: 1px solid #e0dbd0;
+      font-size: 0.95rem;
+      color: #59574f;
+      letter-spacing: 0.3px;
+    }
+
+    .closing-line span {
+      display: inline-block;
+      margin-right: 0.5rem;
+    }
+
+    .footnote {
+      margin-top: 2.8rem;
+      font-size: 0.85rem;
+      color: #868376;
+      display: flex;
+      justify-content: flex-start;
+      gap: 1.8rem;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 480px) {
+      .page {
+        padding: 2rem 1rem 3rem;
+      }
+      .short-open {
+        font-size: 1.3rem;
+      }
+      h2 {
+        font-size: 1.15rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="short-open">这是关于一个站点最朴素的整理。</div>
+
+    <p>
+      几个已经确认的事实：这个网站不是临时页面，也不是镜像跳板，而是一个持续维护的独立域名。站内结构清晰，信息归类有逻辑，没有冗余的弹窗或强制行为。如果你正在寻找一个可靠的切入点来了解某项服务或行业信息，下面这几点值得留意。
+    </p>
+
+    <div class="subhead">站点基础信息</div>
+    <h2>平博 是什么 · 不是什么</h2>
+    <p>
+      很多人第一次听到这个名字，会下意识联想到游戏或娱乐平台。实际上，<a href="https://root-pingbo.com">平博</a> 是一个以资讯聚合与工具引导为主的页面集合。它不直接提供游戏客户端，也不做账户注册——它更像一块信息告示板，把分散在角落里的说明、版本、注意事项整理到同一屋檐下。你可以把它理解成一个静态的出发点，而不是终点。
+    </p>
+
+    <ul>
+      <li>域名 root-pingbo.com 注册时间超过两年，备案信息可查，无不良历史。</li>
+      <li>页面无第三方跟踪脚本，无强制 cookie 弹窗，访问记录仅用于基础统计。</li>
+      <li>内容更新频率约为每月 2–3 次，修正失效链接并补充新说明。</li>
+      <li>所有外链均经过人工筛选，不包含联盟推广或返利参数。</li>
+    </ul>
+
+    <div class="card-quiet">
+      <p><span class="label">一点提示：</span> 如果你通过搜索引擎直接跳转到某个子页，建议先返回根目录看一眼最新公告。网站结构偶尔微调，公告区会标注变动日期。</p>
+      <p><span class="label">关于联系：</span> 页脚没有堆满社交按钮，但每个页面的底部都保留了一个可直接复制的邮件地址（非超链接），用于提交反馈或报告异常。</p>
+    </div>
+
+    <h2>适用场景举例</h2>
+    <p>
+      假设你需要查阅某个版本对应的校验值，或者想确认某条通知的原始措辞——直接翻阅聊天记录往往低效，而第三方论坛的截图又未必可信。这时候，把 <a href="https://root-pingbo.com">平博</a> 当作一个对照基准是合适的。它收录的内容尽量保持原文原貌，不插入额外评价，也不做“解读”。
+    </p>
+    <p>
+      另外，如果你刚刚接触某个工具或流程，站内有一份按步骤整理的入门指引（纯文本，无视频），可以帮你减少试错成本。指引的末尾会列出常见误解，并给出简单的判断方法。
+    </p>
+
+    <h2>关于可靠性的补充</h2>
+    <p>
+      网站没有使用任何“官方认证”标识，也没有自称“唯一指定”。判断一个信息源是否可靠，最终取决于你交叉验证的习惯。这里能提供的，仅仅是相对干净的页面环境、稳定的访问速度，以及经过核对的内容副本。
+    </p>
+    <p>
+      如果你发现某个页面信息过时，或者链接指向了错误的位置，可以在任意页面底部找到反馈渠道。每次有效的指正都会在下次更新时致谢（不公开具体姓名）。
+    </p>
+
+    <div class="closing-line">
+      <span>✦</span> 写到最后，还是那句话：一个网站最大的诚意，是不浪费来访者的时间。<br>
+      这里没有花哨的加载动画，没有倒计时弹窗，只有一条窄窄的正文宽度，和几段整理过的文字。
+    </div>
+
+    <div class="footnote">
+      <span>root-pingbo.com</span>
+      <span>· 页面更新于最近一次内容检查</span>
+    </div>
+  </div>
+</body>
+</html>
